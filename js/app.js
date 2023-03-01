@@ -114,21 +114,3 @@ gsap.from(".home_social-icon", {
   stagger: 0.2,
 });
 /* contact https://smtpjs.com/ */
-const fname = document.getElementById("fname");
-const email = document.getElementById("email");
-const project = document.getElementById("project_name");
-const phone = document.getElementById("phone");
-const message = document.getElementById("message");
-const submit = document.getElementsByClassName("form_contact")[0];
-
-submit.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("Clicked");
-});
-Email.send({
-  SecureToken: "7d5c823c-4799-41d3-9d3b-42b3583945e1",
-  To: "gaborf703@gmail.com",
-  From: "gaborf703@gmail.com",
-  Subject: "This is the subject",
-  Body: "And this is the body",
-}).then((message) => alert(message));

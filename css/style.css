@@ -332,7 +332,108 @@ img {
   width: 220px;
   border-radius: 0.5rem;
 }
-
+/*Skills*/
+.skill_conatainer {
+  position: relative;
+  max-width: 1600px;
+  width: 100%;
+  background: #fff;
+  margin: 0 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cont_1 {
+  max-width: 600px;
+  width: 50%;
+  margin-right: 1rem;
+}
+.cont_2 {
+  max-width: 600px;
+  width: 50%;
+  margin-left: 1rem;
+}
+.skill_box {
+  width: 100%;
+  margin: 2.5rem 0;
+}
+.skill_title {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: var(--font-semi-bold);
+  color: #333;
+}
+.skill_bar {
+  height: 0.8rem;
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid #000;
+  color: rgba(0, 0, 0, 0.1);
+}
+.skill_per {
+  position: relative;
+  display: block;
+  border-radius: 0.6rem;
+  height: 100%;
+  width: 75%;
+  background: #4070f4;
+  animation: progress 0.4s ease-in-out forwards;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+.tool_tip {
+  position: absolute;
+  right: -1.4rem;
+  top: -2.8rem;
+  background: #4070f4;
+  font-size: 0.6rem;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 0.3rem;
+  font-weight: var(--font-semi-bold);
+  z-index: var(--z-normal);
+}
+.tool_tip::before {
+  content: "";
+  position: absolute;
+  left: 47%;
+  bottom: -2px;
+  height: 10px;
+  z-index: -1;
+  width: 10px;
+  background-color: #4070f4;
+  transform: translateX(-50%) rotate(45deg);
+}
+.skill_css {
+  width: 60%;
+  animation-delay: 0.1;
+}
+.skill_javascript {
+  width: 55%;
+  animation-delay: 0.2;
+}
+.skill_node {
+  width: 35%;
+  animation-delay: 0.3;
+}
+.skill_react {
+  width: 35%;
+  animation-delay: 0.3;
+}
+.skill_c {
+  width: 25%;
+  animation-delay: 0.3;
+}
+/*qualification*/
 .qualification_container {
   row-gap: 2.5rem;
 }
@@ -535,6 +636,9 @@ img {
     justify-self: center;
   }
 }
+.skill_title {
+  font-size: 1rem;
+}
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -586,6 +690,9 @@ img {
   .about_img {
     width: 300px;
   }
+  .skill_title {
+    font-size: 1.4rem;
+  }
   .qualification_box {
     display: flex;
     justify-content: space-between;
@@ -611,6 +718,9 @@ img {
   }
   .project_title {
     font-size: 2.5rem;
+  }
+  .tool_tip {
+    font-size: 0.9rem;
   }
 }
 @media screen and (min-width: 1024px) {
